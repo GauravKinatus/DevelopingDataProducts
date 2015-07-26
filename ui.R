@@ -11,12 +11,13 @@ dataset <- Wage
 
 # side bar will take all the inputs from the User
 shinyUI(pageWithSidebar(
-        
-        headerPanel("Wage Explorer"),
+        #Title of the app
+        headerPanel("Wage Explorer - MD Wages Data"),
         
         sidebarPanel(
                 sliderInput('sampleSize', 'Sample Size', min=1, max=nrow(dataset),
                             value=1500, step=100),
+                textOutput('CalculationText'),
                 radioButtons('varGroupBy', 
                              label = h3("Group By?"),
                              choices = list("None" = 1,
@@ -24,16 +25,19 @@ shinyUI(pageWithSidebar(
                                        "Education" = 3),
                                    selected = 1
                                    ),
-                textInput('valueGroupNum','Number of Groups',value="1"),
                 checkboxInput('varRegressionLines','Show Regression Lines?')
         ),#/sidebarPane
 
 # Main panel will show the output of the plot and the documentation Tab        
         mainPanel(
+              # In the main panel, build a tabset with two tabs
                 tabsetPanel(
-                        tabPanel("Plot", plotOutput('plot')),
+                        # tab 1 is for the Plot and the calculations
+                        tabPanel("Plot", 
+                                 plotOutput('plot')),
+                        #tab 2 is for the documentation from the Markdown file
                         tabPanel("Documentation", includeMarkdown("include.md"))
-                )
-        )
+                )#end of tabsetPanel
+        )#end of mainPanel
         
-))
+))#end of ShinyUI

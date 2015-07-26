@@ -70,9 +70,18 @@ img {
 
 <div id="shiny-app" class="section level1">
 <h1>Shiny App</h1>
-<p>This is a simple App built using the Rpackage to show interactive User Experience supported by Shiny. The application allows the user to create an interactive plot based on the Wage dataset from the ISLR package.</p>
-<p>The app gives the user the ability to choose: 1. Sample data size: By default, the data set loads half the data (1500) records. The slider input can be used to change the sample size in steps of 100 records. 2. Group Data by: by default the plot does not show any groupings. If the user wants to see the different groupings, the App allows the user to gropu by Job categrory or Education 3. Finally the app allows the user to add regression lines</p>
-<p>The backend server uses qplot to build the plots and uses simple conditional logic to change the color variable in qplot(). #WAGE {ISLR} Wage and other data for a group of 3000 workers in the Mid-Atlantic region.</p>
+<p>This is a simple App built using the Shiny package to show interactive User Experience. The application allows the user to create an interactive plot based on the Wage dataset from the ISLR package.</p>
+<p>The app gives the user the ability to choose:</p>
+<ol style="list-style-type: decimal">
+<li><p><em>Sample data size:</em> By default, the data set loads half the data (1500) records. The slider input can be used to change the sample size in steps of 100 records. Based on the slider value, <strong>I calculate the sample size in percentage</strong>.</p></li>
+<li><p><em>Group Data by:</em> By default the plot does not show any groupings. If the user wants to see the different groupings, the App allows the user to gropu by Job categrory or Education.</p></li>
+<li><p><em>Regression Lines</em>: Finally the app allows the user to add regression lines based on the linear modeling.</p></li>
+</ol>
+<p>The backend server uses qplot to build the plots and uses simple conditional logic to change the color variable in qplot().</p>
+</div>
+<div id="wage-islr" class="section level1">
+<h1>WAGE {ISLR}</h1>
+<p>Wage and other data for a group of 3000 workers in the Mid-Atlantic region.</p>
 </div>
 <div id="source" class="section level1">
 <h1>Source</h1>
@@ -80,7 +89,7 @@ img {
 </div>
 <div id="references" class="section level1">
 <h1>References</h1>
-<p>Games, G., Witten, D., Hastie, T., and Tibshirani, R. (2013) An Introduction to Statistical Learning with applications in R, www.StatLearning.com, Springer-Verlag, New York This application is based on the data that was extracted from the 1974 Motor Trend US magazine, and comprises fuel consumption and 10 aspects of automobile design and performance for 32 automobiles (1973 to 1974 models).</p>
+<p>Games, G., Witten, D., Hastie, T., and Tibshirani, R. (2013) An Introduction to Statistical Learning with applications in R, www.StatLearning.com, Springer-Verlag, New York</p>
 </div>
 
 

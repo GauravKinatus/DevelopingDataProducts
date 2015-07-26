@@ -32,8 +32,14 @@ shinyServer(function(input, output) {
                 #send the output to the plot area
                 print(p)
                 
-                cutWage <- cut2(dataset(),g<=input$valueGroupNum)                
+                     
         }, height=500) # Height > 500 requires the user to scroll to see the entire plot
         
+        output$CalculationText <- reactiveText(function(){
+                paste("You have selected sample size of ",input$sampleSize,
+                      " which results in a training set of", 
+                      round((input$sampleSize/nrow(Wage)*100),2),
+                      "%.")
+        })
  
 })
