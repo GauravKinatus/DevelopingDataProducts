@@ -32,5 +32,5 @@ See http://shiny.rstudio.com/tutorial/lesson7/ for details.
 My shiny app is here: https://kinatus.shinyapps.io/Project
 
 Reproducible Pitch Presentation
-
-My R Presentation is published at 
+My R Presentation is published at
+http://rpubs.com/GauravKinatus/WageExplorerDeck
