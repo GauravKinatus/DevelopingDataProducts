@@ -7,21 +7,15 @@ Building a Shiny App
 ========================================================
 The Wage Explorer is a Shiny App, deployed on the Shiny server. 
 https://kinatus.shinyapps.io/Project
-
-The App is built to visually present the data from the Wages data in the ISLR package. The app showcases the following aspects.
+```{r, echo=TRUE}
+library(ISLR)
+library(ggplot2)
+```
+Wage dataset in the ISLR package has Wage and other data for a group of 3000 workers in the Mid-Atlantic region. The app showcases the following aspects.
 - How to create a simple Shiny App
 - Creating a Plot from the Wages data
 - Using the Inputs and Outputs to build interactive User Experience
 - Integrating Calculations within the HTML page
-
-Wage Dataset 
-========================================================
-Wage dataset in the ISLR package has Wage and other data for a group of 3000 workers in the Mid-Atlantic region. Use the summary() to review the basic charecterstics.
-```{r, echo=TRUE}
-library(ISLR)
-library(ggplot2)
-summary(Wage)
-```
 
 Plot from Wages data
 ========================================================
